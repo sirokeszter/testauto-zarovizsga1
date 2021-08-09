@@ -16,10 +16,11 @@ try:
     driver.get("https://black-moss-0a0440e03.azurestaticapps.net/x234.html")
     time.sleep(2)
 
+
     def rectangle_perimeter(a, b):
-        a_side= driver.find_element_by_id("a")
-        b_side= driver.find_element_by_id("b")
-        btn= driver.find_element_by_id("submit")
+        a_side = driver.find_element_by_id("a")
+        b_side = driver.find_element_by_id("b")
+        btn = driver.find_element_by_id("submit")
 
         a_side.clear()
         b_side.clear()
@@ -29,10 +30,11 @@ try:
         btn.click()
         time.sleep(2)
 
+
     result = driver.find_element_by_id("result")
 
     # TC01: Helyes kitöltés esete: a: 99, b: 12, Eredmény: 222
-    rectangle_perimeter(99,12)
+    rectangle_perimeter(99, 12)
     assert result.text == "222"
 
     # TC02: Nem számokkal történő kitöltés: a: kiskutya, b: 12, Eredmény: NaN
